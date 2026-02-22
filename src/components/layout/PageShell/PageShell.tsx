@@ -20,7 +20,7 @@ export function PageShell({
         <div className={utils.container}>
           <div className={styles.topRow}>
             <div className={styles.left}>
-              <img src="./logo.png" alt="cartao-app" height={32} />
+              <img src="../../../assets/logo.png" alt="cartao-app" height={32} />
               {breadcrumbs ? <div className={styles.breadcrumbs}>{breadcrumbs}</div> : null}
               <h1 className={styles.title}>{title}</h1>
               {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}

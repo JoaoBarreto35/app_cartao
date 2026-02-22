@@ -1,5 +1,8 @@
 import styles from "./PageShell.module.css";
 import utils from "../../../styles/utils.module.css";
+import logo from "../../../assets/logo.png";
+
+
 
 export function PageShell({
   title,
@@ -20,7 +23,7 @@ export function PageShell({
         <div className={utils.container}>
           <div className={styles.topRow}>
             <div className={styles.left}>
-              <img src="../../../assets/logo.png" alt="cartao-app" height={32} />
+              <img src={logo} alt="cartao-app" height={32} />
               {breadcrumbs ? <div className={styles.breadcrumbs}>{breadcrumbs}</div> : null}
               <h1 className={styles.title}>{title}</h1>
               {subtitle ? <p className={styles.subtitle}>{subtitle}</p> : null}

@@ -1,0 +1,239 @@
+/* src/pages/workspaceSettings/WorkspaceSettings.module.css */
+
+.stack {
+  display: grid;
+  gap: var(--s-5);
+}
+
+.fallback {
+  padding: var(--s-6);
+}
+
+/* ------------------------------
+   Header / meta
+------------------------------ */
+
+.headerRight {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: var(--fs-12);
+  white-space: nowrap;
+}
+
+.mutedSmall {
+  font-size: var(--fs-12);
+  color: var(--muted);
+}
+
+/* ------------------------------
+   Layout helpers
+------------------------------ */
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4);
+}
+
+@media (max-width: 860px) {
+  .grid2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ------------------------------
+   File input (fake button)
+------------------------------ */
+
+.fileLabel {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.fileInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.fileFakeBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  font-size: var(--fs-14);
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  user-select: none;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.fileFakeBtn:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+.fileFakeBtn:active {
+  transform: translateY(1px);
+}
+
+/* quando o input está disabled, o cursor muda */
+.fileInput:disabled + .fileFakeBtn {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* ------------------------------
+   Preview (Import)
+------------------------------ */
+
+.preview {
+  margin-top: var(--s-4);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: var(--s-4);
+  display: grid;
+  gap: var(--s-3);
+}
+
+.previewTitle {
+  font-weight: 800;
+  letter-spacing: 0.2px;
+}
+
+.previewStats {
+  display: grid;
+  gap: 6px;
+  font-size: var(--fs-14);
+}
+
+.previewErrors {
+  color: var(--danger);
+  font-size: var(--fs-14);
+  display: grid;
+  gap: var(--s-2);
+}
+
+.previewErrorsTitle {
+  font-weight: 800;
+}
+
+.previewErrorsList {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* ------------------------------
+   Simple lists (Categories / Classes)
+------------------------------ */
+
+.simpleList {
+  list-style: none;
+  padding: 0;
+  margin: var(--s-4) 0 0;
+  display: grid;
+  gap: var(--s-2);
+}
+
+.simpleRow {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-md);
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.inlineInput {
+  flex: 1;
+  min-width: 200px;
+}
+
+/* ------------------------------
+   Transactions (classify)
+------------------------------ */
+
+.txList {
+  display: grid;
+  gap: var(--s-3);
+}
+
+.txItem {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--r-md);
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.02);
+  display: grid;
+  gap: var(--s-3);
+}
+
+.txTop {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-4);
+  align-items: center;
+}
+
+.txLeft {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.txTitle {
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.txMeta {
+  font-size: var(--fs-12);
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.txAmount {
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.txGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4);
+}
+
+@media (max-width: 720px) {
+  .txGrid {
+    grid-template-columns: 1fr;
+  }
+}

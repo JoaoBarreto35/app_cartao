@@ -1,0 +1,248 @@
+.stack {
+  display: grid;
+  gap: var(--s-5);
+}
+
+.fallback {
+  padding: var(--s-6);
+}
+
+.headerRight {
+  display: flex;
+  gap: var(--s-3);
+  align-items: flex-end;
+  flex-wrap: wrap;
+}
+
+.metaRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--muted);
+  font-size: var(--fs-12);
+}
+
+.mutedSmall {
+  color: var(--muted);
+  font-size: var(--fs-12);
+}
+
+/* -------- Summary (total + limit) -------- */
+
+.summaryGrid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: var(--s-4);
+}
+
+@media (max-width: 980px) {
+  .summaryGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.totalBig {
+  font-size: 20px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.summarySplit {
+  display: grid;
+  gap: var(--s-2);
+}
+
+.summaryLine {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.kpiLabel {
+  font-size: var(--fs-12);
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.35px;
+}
+
+.kpiValue {
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.limitBox {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.limitTop {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--s-3);
+}
+
+@media (max-width: 520px) {
+  .limitTop {
+    grid-template-columns: 1fr;
+  }
+}
+
+.limitStat {
+  padding: 10px 12px;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  display: grid;
+  gap: 6px;
+}
+
+.progressRow {
+  display: grid;
+  gap: 10px;
+}
+
+.progressTrack {
+  height: 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  background: rgba(255, 255, 255, 0.05);
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--primary), var(--primary-2));
+  transition: width 200ms ease;
+}
+
+.progressOver {
+  background: linear-gradient(90deg, rgba(255, 77, 109, 0.9), rgba(255, 77, 109, 0.55));
+}
+
+.progressMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s-3);
+  flex-wrap: wrap;
+  font-size: var(--fs-12);
+  color: var(--muted);
+}
+
+.pct {
+  font-weight: 800;
+  color: var(--text);
+}
+
+.smallMuted {
+  color: var(--muted);
+}
+
+.dangerText {
+  color: #ffd7df;
+}
+
+/* -------- Columns (3 cards) -------- */
+
+.columnsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--s-4);
+  align-items: start;
+}
+
+@media (max-width: 980px) {
+  .columnsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.colTotal {
+  font-size: 16px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+/* -------- Items list -------- */
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: var(--s-2);
+}
+
+.item {
+  color: var(--text);
+  width: 100%;
+  text-align: left;
+  border-radius: var(--r-md);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.02);
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s-4);
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.item:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.item:active {
+  transform: translateY(1px);
+}
+
+.itemLeft {
+  min-width: 0;
+  display: grid;
+  gap: 6px;
+}
+
+.itemTitle {
+  font-weight: 800;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemMeta {
+  font-size: var(--fs-12);
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.itemInstallments {
+  font-weight: 300;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.itemAmount {
+  font-weight: 900;
+  white-space: nowrap;
+}

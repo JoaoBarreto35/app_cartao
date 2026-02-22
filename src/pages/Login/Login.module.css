@@ -1,0 +1,12 @@
+.center {
+  display: grid;
+  place-items: center;
+  padding-top: 8vh;
+}
+
+.form {
+  display: grid;
+  gap: var(--s-4);
+  min-width: 320px;
+  max-width: 420px;
+}

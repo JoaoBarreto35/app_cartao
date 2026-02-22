@@ -1,0 +1,9 @@
+.nav { color: var(--muted); font-size: var(--fs-14); }
+.ol { list-style: none; display: flex; gap: 8px; padding: 0; margin: 0; flex-wrap: wrap; }
+.li { display: inline-flex; align-items: center; gap: 8px; }
+
+.link { color: var(--muted); }
+.link:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+
+.current { color: var(--text); }
+.sep { opacity: 0.6; }
